@@ -35,6 +35,4 @@ jobs:
         scp -i private_key -o StrictHostKeyChecking=no -r ./* ${USER}@${HOST}:~/app
         ssh -i private_key -o StrictHostKeyChecking=no ${USER}@${HOST} '
           cd ~/app
-          pip install -r requirements.txt
-          sudo systemctl restart your-fastapi-service
         '
